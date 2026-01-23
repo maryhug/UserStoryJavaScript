@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Notas - Gestión del DOM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- TASK 1: Estructura base HTML -->
+<div class="container">
+    <h1>📝 Mi Lista de Notas</h1>
+    <p class="instrucciones">
+        Agrega tus notas y se guardarán automáticamente.
+        Incluso si recargas la página, ¡permanecerán aquí!
+    </p>
+
+    <!-- Input y botón para agregar notas -->
+    <div class="input-container">
+        <input
+                type="text"
+                id="inputNota"
+                placeholder="Escribe tu nota aquí..."
+                aria-label="Campo de texto para nueva nota"
+        >
+        <button id="btnAgregar">Agregar</button>
+    </div>
+
+    <!-- Lista de notas (ul) -->
+    <ul id="listaNotas"></ul>
+
+    <!-- Contador de notas -->
+    <div class="contador" id="contador">0 notas guardadas</div>
+</div>
+
+<!-- Enlace al archivo JavaScript -->
+<script src="manipulacion_dom.js"></script>
+</body>
+</html>
