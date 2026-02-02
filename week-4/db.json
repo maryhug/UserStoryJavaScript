@@ -1,0 +1,25 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Laptop Dell XPS 13",
+      "precio": 1299.99,
+      "descripcion": "Laptop ultradelgada con procesador Intel Core i7, 16GB RAM, 512GB SSD",
+      "fechaCreacion": "2024-01-15T10:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "nombre": "Mouse Logitech MX Master 3",
+      "precio": 99.99,
+      "descripcion": "Mouse inalámbrico ergonómico con scroll magnético y 7 botones personalizables",
+      "fechaCreacion": "2024-01-16T14:20:00.000Z"
+    },
+    {
+      "id": 3,
+      "nombre": "Teclado Mecánico Keychron K2",
+      "precio": 79.99,
+      "descripcion": "Teclado mecánico compacto 75% con switches Gateron Blue y retroiluminación RGB",
+      "fechaCreacion": "2024-01-17T09:15:00.000Z"
+    }
+  ]
+}

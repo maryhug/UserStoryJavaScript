@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos - Módulo 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>📦 Gestión de Productos</h1>
+
+    <!-- Mensaje de notificación -->
+    <div id="messageBox" class="message"></div>
+
+    <!-- Formulario de productos -->
+    <div class="form-section">
+        <h2 style="margin-bottom: 20px; color: #555;">
+            <span id="formTitle">Agregar Nuevo Producto</span>
+        </h2>
+        <form id="productForm">
+            <div class="form-group">
+                <label for="productName">Nombre del Producto *</label>
+                <input
+                        type="text"
+                        id="productName"
+                        placeholder="Ej: Laptop HP Pavilion"
+                        required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="productPrice">Precio (USD) *</label>
+                <input
+                        type="number"
+                        id="productPrice"
+                        placeholder="Ej: 599.99"
+                        step="0.01"
+                        min="0"
+                        required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="productDescription">Descripción</label>
+                <textarea
+                        id="productDescription"
+                        placeholder="Describe el producto..."
+                ></textarea>
+            </div>
+
+            <input type="hidden" id="productId" value="">
+
+            <button type="submit" class="btn btn-primary">
+                <span id="btnSubmitText">➕ Agregar Producto</span>
+            </button>
+        </form>
+    </div>
+
+    <!-- Botón de sincronización -->
+    <button id="btnSync" class="btn btn-sync">
+        🔄 Sincronizar con Servidor
+    </button>
+
+    <!-- Loading spinner -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p style="margin-top: 10px; color: #666;">Cargando...</p>
+    </div>
+
+    <!-- Lista de productos -->
+    <div class="products-section">
+        <h2>Lista de Productos</h2>
+        <ul id="productList" class="product-list">
+            <!-- Los productos se renderizarán aquí dinámicamente -->
+        </ul>
+    </div>
+</div>
+
+<!-- Enlace al archivo JavaScript -->
+<script src="app.js"></script>
+</body>
+</html>
