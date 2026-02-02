@@ -1,7 +1,3 @@
-// ============================================
-// CONFIGURACIÓN Y VARIABLES GLOBALES
-// ============================================
-
 // URL de la API (JSON Server local - puerto 3000)
 const API_URL = 'http://localhost:3000/productos';
 
@@ -10,10 +6,6 @@ let productos = [];
 
 // Variable para rastrear si estamos editando
 let editandoProducto = null;
-
-// ============================================
-// INICIALIZACIÓN DE LA APLICACIÓN
-// ============================================
 
 /**
  * Función que se ejecuta cuando el DOM está completamente cargado
@@ -34,10 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(`Productos cargados: ${productos.length}`);
 });
 
-// ============================================
-// CONFIGURACIÓN DE EVENT LISTENERS
-// ============================================
-
 /**
  * Configura todos los event listeners de la aplicación
  */
@@ -52,10 +40,6 @@ function configurarEventListeners() {
 
     console.log('Event listeners configurados');
 }
-
-// ============================================
-// TASK 2: CAPTURA E INTERACCIÓN CON USUARIO
-// ============================================
 
 /**
  * Maneja el evento submit del formulario
@@ -132,10 +116,6 @@ function validarDatosProducto(nombre, precio) {
 function generarId() {
     return 'prod_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
 }
-
-// ============================================
-// OPERACIONES CRUD - ARREGLO LOCAL
-// ============================================
 
 /**
  * Agrega un nuevo producto al arreglo
@@ -241,10 +221,6 @@ function editarProducto(id) {
         console.log('Editando producto:', producto);
     }
 }
-
-// ============================================
-// TASK 3: MANIPULACIÓN DINÁMICA DEL DOM
-// ============================================
 
 /**
  * Renderiza todos los productos en el DOM
@@ -368,10 +344,6 @@ function mostrarMensaje(texto, tipo = 'success') {
     }, 3000);
 }
 
-// ============================================
-// TASK 4: PERSISTENCIA EN LOCAL STORAGE
-// ============================================
-
 /**
  * Guarda el arreglo de productos en Local Storage
  */
@@ -413,10 +385,6 @@ function cargarDesdeLocalStorage() {
         mostrarMensaje('Error al cargar datos guardados', 'error');
     }
 }
-
-// ============================================
-// TASK 5: INTEGRACIÓN CON FETCH API
-// ============================================
 
 /**
  * Sincroniza los productos con el servidor
@@ -626,10 +594,6 @@ function mostrarLoading(mostrar) {
     }
 }
 
-// ============================================
-// FUNCIONES AUXILIARES
-// ============================================
-
 /**
  * Limpia todos los datos (útil para pruebas)
  */
@@ -645,10 +609,6 @@ function limpiarTodo() {
 
 // Exponer función globalmente para pruebas desde consola
 window.limpiarTodo = limpiarTodo;
-
-// ============================================
-// MANEJO DE ERRORES GLOBAL
-// ============================================
 
 // Capturar errores no manejados
 window.addEventListener('error', (evento) => {
